@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: book
+spec:
+  containers:
+   - name: book
+     image: ijazu/book
+  ports:
+    - containerPort: 8080
