@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+   name: book
+spec:
+   replicas: 2
+   template:
+     metadata:
+       labels:
+          env: dev   
+   spec:
+      containers:
+         - name: abook
+           image: ijazu/abook
+           ports:
+             - containerPort: 8080
+
