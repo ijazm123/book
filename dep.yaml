@@ -11,7 +11,7 @@ spec:
      spec:
         containers:
          - name: abook
-           image: ijazu/abook
+           image: ijazu/adbook
            ports:
              - containerPort: 8080
 
