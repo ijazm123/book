@@ -8,8 +8,8 @@ spec:
      metadata:
        labels:
           env: dev   
-   spec:
-      containers:
+     spec:
+        containers:
          - name: abook
            image: ijazu/abook
            ports:
