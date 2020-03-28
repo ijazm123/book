@@ -1,11 +1,23 @@
 pipeline{
-agent any
-stages{
-stage("Git clone"){
-steps{
-git 'https://github.com/ijazm123/book.git'
-}}
-stage("compile"){
-steps{
-sh "mvn compile"
-}}}}
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git 'https://github.com/ijazm123/book.git'
+            }}
+            stage("maven compile"){
+                steps{
+                    sh "mvn compile"
+                }
+            }
+            stage("maven test"){
+                steps{
+                    sh "mvn test"
+                }
+            }
+            stage("maven package"){
+                steps{
+                    sh "mvn clean package"
+                }
+            }
+            }}
