@@ -23,4 +23,4 @@ pipeline{
             stage("docker image"){
                steps{
                    sh "sudo docker build -t ijazu/addbok ."
-            }}
+            }}}}
