@@ -26,5 +26,5 @@ pipeline{
             }}
            stage("docker run"){
               steps{
-                sh "sudo docker run -itd -p 8088:8088 --name abook ijazu/adbook"
+                sh "sudo docker run -itd -p 8098:8088 --name abook ijazu/adbook"
 }}}}
