@@ -23,4 +23,8 @@ pipeline{
             stage("docker image"){
                steps{
                    sh "sudo docker build -t ijazu/addbok ."
-            }}}}
+            }}
+           stage("docker run"){
+              steps{
+                sh "sudo docker run -itd -p 8088:8088 --name abook ijazu/adbook"
+}}}}
