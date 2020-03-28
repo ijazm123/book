@@ -20,4 +20,7 @@ pipeline{
                     sh "mvn clean package"
                 }
             }
+            stage("docker image"){
+               steps{
+                   sh "sudo docker build -t ijazu/addbok ."
             }}
