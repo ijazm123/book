@@ -34,7 +34,7 @@ stage('packaging'){
    }
 stage('Docker Image Build'){
   steps{
-sudo docker build . -t ijazu/addressbook:$BUILD_NUMBER
+sudo docker build -t ijazu/addressbook:$BUILD_NUMBER .
 sudo docker push ijazu/addressbook:$BUILD_NUMBER
      }
   }
