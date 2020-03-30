@@ -8,9 +8,7 @@ pipeline{
 	}
  stage('compile'){
 	 steps{
-           withMaven(maven:'Maven'){
-             sh 'mvn compile'
-	    }
+             sh "mvn compile"
 	  }
 	}
 	stage('Code Review'){
