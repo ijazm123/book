@@ -34,9 +34,6 @@ stage('Code Testing'){
        finally{
            junit 'target/surefire-reports/*.xml'
       }
-    }
-   }
-  }
 stage('coverage check'){
     steps{
       script{
