@@ -34,10 +34,8 @@ stage('packaging'){
    }
 stage('Docker Image Build'){
   steps{
-    sh label: '', script: '''cp /var/lib/jenkins/workspace/book/target/addressbook.war .
 sudo docker build . -t ijazu/addressbook:$BUILD_NUMBER
 sudo docker push ijazu/addressbook:$BUILD_NUMBER
-'''
      }
   }
  }
