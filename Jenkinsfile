@@ -3,7 +3,7 @@ pipeline{
 	stages{
 	 stage('Git checkout'){
 	 steps{
-	 git 'https://github.com/balucc/Addressbook.git'
+	 git 'https://github.com/ijazm123/book.git'
 	  }
 	}
  stage('compile'){
