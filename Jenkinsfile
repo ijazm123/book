@@ -28,10 +28,7 @@ steps{
  }
 stage('Code Testing'){
     steps{
-        script{
-           try{
-             withMaven(maven:'Maven'){
-              sh 'mvn test'
+        sh "mvn test"
              }
            }
        finally{
@@ -56,11 +53,9 @@ stage('coverage check'){
    }
 stage('packaging'){
    steps{
-       withMaven(maven:'Maven'){
-       sh 'mvn package'
+       sh "mvn package"
     }
    }
-  }
 stage('Docker Image Build'){
   steps{
     sh label: '', script: '''cp /var/lib/jenkins/workspace/javaPackage/target/addressbook.war .
