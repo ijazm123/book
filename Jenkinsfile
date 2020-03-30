@@ -12,20 +12,14 @@ pipeline{
 	  }
 	}
 	stage('Code Review'){
-steps{
-	script{
-	   try{
-            withMaven(maven:'Maven'){
-             sh 'mvn pmd:pmd'
+		steps{
+             sh "mvn pmd:pmd"
              }
            }
-      finally{
          stage('Publish PMD'){
-            pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/pmd.xml', unHealthy: ''
+		 steps{
+		    pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'target/pmd.xml', unHealthy: ''
           }} 
-       }
-   }
- }
 stage('Code Testing'){
     steps{
         sh "mvn test"
