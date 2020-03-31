@@ -38,7 +38,7 @@ sh "sudo docker build -t ijazu/addressbook:$BUILD_NUMBER ."
   }}
 stage('docker push'){
 	steps{
-		withDockerRegistry(credentialsId: 'Docker', url: 'https://hub.docker.com/') {
+		withDockerRegistry([credentialsId: "Docker", url: ""]){
      sh "sudo docker push ijazu/addressbook:$BUILD_NUMBER"
 }
                
