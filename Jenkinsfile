@@ -41,4 +41,4 @@ stage('docker push'){
             sh "sudo docker push ijazu/addressbook:$BUILD_NUMBER"
   }
  }
-}
+}}
